@@ -11,6 +11,7 @@
     -v /var/run/docker.sock:/var/run/docker.sock
     -v {{ hostroot }}/vars:/vars
     -v {{ hostroot }}/vars/app/{{CC_LANGUAGE}}:/go/src/github.com/app
+    -p 8081:8081
     --entrypoint /vars/run/apprun.sh
     {{ LANGUAGEENVS[CC_LANGUAGE] }}
   register: runstates
