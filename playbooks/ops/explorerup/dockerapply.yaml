@@ -41,7 +41,7 @@
       -e "LOG_LEVEL_CONSOLE=debug"
       -e "LOG_CONSOLE_STDOUT=true"
       -e "DISCOVERY_AS_LOCALHOST=false"
-      -p {{ explorer_port }}:8080
+      -p {{ explorer_port }}:8083
       -v explorerwallet.{{ NETNAME }}:/opt/wallet
       -v {{hostroot}}/vars/explorer/config.json:/opt/explorer/app/platform/fabric/config.json
       -v {{hostroot}}/vars/explorer:/opt/explorer/app/platform/fabric/connection-profile
